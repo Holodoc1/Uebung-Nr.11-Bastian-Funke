@@ -3,7 +3,7 @@ package h2;
 public class H2_Main {
 
 	public static void main(String[] args) {
-		int n = 10;
+		int n = 30;
 		benchmark(n);
 	}
 	
@@ -19,7 +19,7 @@ public class H2_Main {
 				return cache[n - 1];
 			}else {
 				cache[n - 1] = fibonacciCached(n - 1, cache) + fibonacciCached(n - 2, cache);
-				return fibonacciCached(n - 1, cache) + fibonacciCached(n - 2, cache);
+				return cache[n - 1];
 			}
 		}
 	}
